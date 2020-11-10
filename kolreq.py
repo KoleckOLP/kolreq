@@ -3,12 +3,10 @@ import os
 
 #==========MUSTYPLAT CLEAR==========#
 def clear():
-    if(os.name == 'nt'):
+    if(os.name == 'nt'): #Windows
         os.system('cls')
-    elif(os.name == 'posix'):
+    elif(os.name == 'posix'): #Linux,Mac,BSD,haiku,android
         os.system('clear')
-    else:
-        print('####If you see this please contact the dev. 0x2020####')
 
 #==========MULTYPLAT READKEY==========#
 def readchar(o=""): #multiplatform readchar
@@ -26,9 +24,9 @@ def readchar(o=""): #multiplatform readchar
 def n(a=""):
     if(isinstance(a, float)):
         a = str(a)
-        if(a[-2:] == ".0"):
+        if(a[-2:] == ".0"): #if last 2 characters are .0 remove then
             return(a[:-2])
         else:
-            return(a)
+            return(a) #if not return the number in original form
     else:
         return(a)
