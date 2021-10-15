@@ -41,10 +41,10 @@ def readchar(shell="", enter=False):  # multiplatform readchar
 
 
 # ==========print msg at position========== #
-def CharAt(y, x, msg):  # needs colorama to be initialized and windows only
+def CharAt(y, x, msg, end=""):  # needs colorama to be initialized and windows only
     x = x + 1  # adding one to both of them because I expect you to input 0 based index but ANSI is using 1 based
     y = y + 1
-    print(f"\033[{y};{x}H{msg}", end="")
+    print(f"\033[{y};{x}H{msg}", end=end)
 
 
 # ==========Removing .0 from floats========== #
